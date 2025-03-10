@@ -3,15 +3,15 @@
 function createGroceries(): string[] {
   // write your code here...
 
-  return []; // replace empty array with what you see is fit
+  return ["Chocolate", "Mango", "Milk", "Bread", "Cheese", "Strawberry"]; // replace empty array with what you see is fit
 }
 
 // Step 2:
 // Write a getSecondGroceryItem function that returns the second grocery item from `groceries` argument
 function getSecondGroceryItem(groceries: string[]): string {
   // write your code here...
-
-  return ""; // replace empty string with what you see is fit
+  // return groceries.length >= 2 ? groceries[1] : "";
+  return groceries.at(1) ?? "";
 }
 
 // Step 3:
@@ -19,15 +19,14 @@ function getSecondGroceryItem(groceries: string[]): string {
 function getGroceriesCount(groceries: string[]): number {
   // write your code here...
 
-  return 0; // replace zero with what you see is fit
+  return groceries.length;
 }
 
 // Step 4:
 // Write a getLastGroceryItem function that returns the last grocery item from `groceries` argument
 function getLastGroceryItem(groceries: string[]): string {
   // write your code here...
-
-  return ""; // replace empty string with what you see is fit
+  return groceries.at(-1) ?? "";
 }
 
 // Step 5:
@@ -35,7 +34,7 @@ function getLastGroceryItem(groceries: string[]): string {
 function removeLastGroceryItem(groceries: string[]): string {
   // write your code here...
 
-  return ""; // replace empty string with what you see is fit
+  return groceries.pop() ?? "";
 }
 
 // Step 6:
@@ -47,8 +46,8 @@ function addNewGroceries(
   itemTwo: string
 ): string[] {
   // write your code here...
-
-  return []; // replace empty array with what you see is fit
+  groceries.push(itemOne, itemTwo);
+  return groceries; // replace empty array with what you see is fit
 }
 
 // Step 7:
@@ -56,7 +55,7 @@ function addNewGroceries(
 function getFirstThreeGroceryItems(groceries: string[]): string[] {
   // write your code here...
 
-  return []; // replace empty array with what you see is fit
+  return groceries.slice(0, 3);
 }
 
 export {
